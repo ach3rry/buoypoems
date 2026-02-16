@@ -34,78 +34,87 @@ export default function SubmitPage() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-ocean-50">
-        <div className="max-w-2xl mx-auto px-4 py-12">
-          <div className="text-center mb-10">
-            <h1 className="text-3xl font-bold text-ocean-900 mb-2">投稿</h1>
-            <p className="text-ocean-600">加入浮标，让你的诗漂流到更远的地方</p>
+      <main className="min-h-screen bg-ukiyo-shironeri">
+        {/* 页面标题区 */}
+        <div className="py-16 bg-white border-b-4 border-ukiyo-beni">
+          <div className="max-w-4xl mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-ukiyo-sumi mb-4 tracking-wider" style={{fontFamily: 'Georgia, serif'}}>投稿</h1>
+            <p className="text-ukiyo-beni tracking-widest uppercase">加入浮标，让你的诗漂流到更远的地方</p>
+            <div className="flex items-center justify-center gap-4 mt-6">
+              <div className="w-16 h-px bg-ukiyo-sumi/30"></div>
+              <div className="w-2 h-2 bg-ukiyo-beni rotate-45"></div>
+              <div className="w-16 h-px bg-ukiyo-sumi/30"></div>
+            </div>
           </div>
+        </div>
 
-          <div className="bg-white p-8 rounded-2xl shadow-sm">
-            <form onSubmit={handleSubmit} className="space-y-5">
+        {/* 表单区 */}
+        <div className="max-w-2xl mx-auto px-4 py-16">
+          <div className="bg-white border-4 border-ukiyo-sumi shadow-relief p-8 md:p-12">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label className="block text-sm font-medium text-ocean-900 mb-2">作者姓名</label>
+                <label className="block text-sm font-bold text-ukiyo-sumi mb-3 tracking-wider">作者姓名</label>
                 <input
                   type="text"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-ocean-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-ocean-500 focus:border-transparent bg-ocean-50"
+                  className="w-full px-5 py-4 border-2 border-ukiyo-sumi bg-ukiyo-shironeri focus:outline-none focus:border-ukiyo-beni transition-colors"
                   placeholder="姓名或笔名"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-ocean-900 mb-2">联系邮箱</label>
+                <label className="block text-sm font-bold text-ukiyo-sumi mb-3 tracking-wider">联系邮箱</label>
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-ocean-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-ocean-500 focus:border-transparent bg-ocean-50"
+                  className="w-full px-5 py-4 border-2 border-ukiyo-sumi bg-ukiyo-shironeri focus:outline-none focus:border-ukiyo-beni transition-colors"
                   placeholder="your@email.com"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-ocean-900 mb-2">作品标题</label>
+                <label className="block text-sm font-bold text-ukiyo-sumi mb-3 tracking-wider">作品标题</label>
                 <input
                   type="text"
                   name="title"
                   value={formData.title}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-ocean-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-ocean-500 focus:border-transparent bg-ocean-50"
+                  className="w-full px-5 py-4 border-2 border-ukiyo-sumi bg-ukiyo-shironeri focus:outline-none focus:border-ukiyo-beni transition-colors"
                   placeholder="作品标题"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-ocean-900 mb-2">作品内容</label>
+                <label className="block text-sm font-bold text-ukiyo-sumi mb-3 tracking-wider">作品内容</label>
                 <textarea
                   name="content"
                   value={formData.content}
                   onChange={handleChange}
                   required
-                  rows={12}
-                  className="w-full px-4 py-3 border border-ocean-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-ocean-500 focus:border-transparent bg-ocean-50 font-serif leading-loose"
+                  rows={14}
+                  className="w-full px-5 py-4 border-2 border-ukiyo-sumi bg-ukiyo-shironeri focus:outline-none focus:border-ukiyo-beni transition-colors font-serif leading-loose"
                   placeholder="粘贴作品内容..."
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-ocean-900 text-white py-3 rounded-xl font-medium hover:bg-ocean-800 transition-colors"
+                className="w-full py-4 bg-ukiyo-beni text-white font-bold tracking-wider shadow-relief hover:shadow-relief-lg hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
               >
                 提交投稿
               </button>
             </form>
 
-            <div className="mt-8 pt-6 border-t border-ocean-100 text-center">
-              <p className="text-ocean-600 text-sm mb-2">或直接发送邮件</p>
-              <a href="mailto:1595486059h@gmail.com" className="text-ocean-900 font-medium hover:underline">
+            <div className="mt-10 pt-8 border-t-2 border-ukiyo-sumi/10 text-center">
+              <p className="text-ukiyo-sumi/60 text-sm mb-3 tracking-wider">或直接发送邮件</p>
+              <a href="mailto:1595486059h@gmail.com" className="text-ukiyo-beni font-bold hover:text-ukiyo-kuchiba transition-colors">
                 1595486059h@gmail.com
               </a>
             </div>

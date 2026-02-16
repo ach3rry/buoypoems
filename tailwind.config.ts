@@ -9,28 +9,35 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ocean: {
-          50: '#f0f9ff',
-          100: '#e0f2fe',
-          200: '#bae6fd',
-          300: '#7dd3fc',
-          400: '#38bdf8',
-          500: '#0ea5e9',
-          600: '#0284c7',
-          700: '#0369a1',
-          800: '#075985',
-          900: '#0c4a6e',
-          950: '#082f49',
+        // 浮世绘配色
+        ukiyo: {
+          'beni': '#E63946',      // 朱红 - 浮世绘经典红
+          'indigo': '#1D3557',    // 靛蓝 - 深海蓝
+          'aizumi': '#244F8A',    // 藍紫 - 紫蓝色
+          'shu': '#D4A373',       // 赭石 - 棕色调
+          'kin': '#C9B037',       // 金色
+          'sumi': '#1A1A1A',      // 墨色 - 深黑
+          'shironeri': '#F5F3EF', // 白练 - 米白
+          'hai': '#8B9D83',       // 灰绿
+          'kuchiba': '#CC7A50',   // 栗色
         },
-        coral: {
-          400: '#fbbf24',
-          500: '#f59e0b',
-          600: '#d97706',
+        // 浮雕阴影
+        relief: {
+          'light': 'rgba(255, 255, 255, 0.15)',
+          'shadow': 'rgba(0, 0, 0, 0.4)',
+          'deep': 'rgba(0, 0, 0, 0.6)',
         }
       },
       fontFamily: {
-        sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-        serif: ['Georgia', 'serif'],
+        'display': ['Georgia', 'serif'],
+        'body': ['system-ui', '-apple-system', 'sans-serif'],
+      },
+      boxShadow: {
+        'relief': '4px 4px 0px 0px rgba(0, 0, 0, 0.9)',
+        'relief-sm': '2px 2px 0px 0px rgba(0, 0, 0, 0.9)',
+        'relief-lg': '8px 8px 0px 0px rgba(0, 0, 0, 0.9)',
+        'float': '0 20px 60px -10px rgba(0, 0, 0, 0.5)',
+        'engrave': 'inset 3px 3px 6px rgba(0, 0, 0, 0.3), inset -3px -3px 6px rgba(255, 255, 255, 0.1)',
       },
     },
   },
