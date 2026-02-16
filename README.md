@@ -14,7 +14,7 @@ npm run dev
 
 ## 项目信息
 
-- **项目位置**: `D:\project\poetry-group-website`
+- **项目位置**: `D:\project\buoypoems`
 - **技术栈**: Next.js 15 + React 19 + TypeScript + Tailwind CSS
 - **联系邮箱**: 1595486059h@gmail.com
 
