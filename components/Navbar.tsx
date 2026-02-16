@@ -11,6 +11,7 @@ export default function Navbar() {
     { name: '作品', path: '/works' },
     { name: '关于', path: '/philosophy' },
     { name: '投稿', path: '/submit' },
+    { name: '管理', path: '/admin' },
   ];
 
   return (
