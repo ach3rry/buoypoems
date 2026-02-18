@@ -107,10 +107,10 @@ export default function Home() {
             </div>
             <div className="prose prose-lg max-w-none mx-auto text-ukiyo-sumi/80">
               <p className="text-center leading-relaxed text-lg mb-6">
-                [在这里介绍浮标诗歌团体]
+                浮标 BUOY 是一个成立于 2024 年的先锋诗歌团体。我们由一群年轻的写作者组成，在语言的边界探索，在诗的海洋里漂流。
               </p>
               <p className="text-center leading-relaxed text-ukiyo-sumi/60">
-                我们是一群年轻的写作者，在语言的边界探索可能性的浮标。
+                我们不追随潮流，不固守传统。我们相信每一首诗都是一座浮标，标记着一次探索，证明着一种存在。
               </p>
             </div>
           </div>
@@ -121,9 +121,9 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-4">
             <div className="grid md:grid-cols-3 gap-8">
               {[
-                { title: '先锋', icon: '⚡', desc: '[描述浮标的先锋特质]' },
-                { title: '年轻', icon: '🌊', desc: '[描述浮标的年轻特质]' },
-                { title: '探索', icon: '🧭', desc: '[描述浮标的探索特质]' }
+                { title: '先锋', icon: '⚡', desc: '突破形式的束缚，探索语言的疆界，在诗歌的无人区开辟新路。' },
+                { title: '年轻', icon: '🌊', desc: '由 00 后写作者发起，我们带着青春的锐气和未被规训的视角。' },
+                { title: '探索', icon: '🧭', desc: '在诗的海洋里，我们是浮标。随波逐流，却不随波逐流。' }
               ].map((feature, index) => (
                 <div
                   key={index}
