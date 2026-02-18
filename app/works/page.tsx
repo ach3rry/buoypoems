@@ -100,10 +100,7 @@ export default function WorksPage() {
             <div className="space-y-12">
               {works.map((work) => (
                 <article key={work.id} className="bg-white border-4 border-ukiyo-sumi shadow-relief p-8 md:p-12">
-                  <div className="flex justify-between items-start mb-6 pb-4 border-b-2 border-ukiyo-sumi/10">
-                    <h2 className="text-2xl font-bold text-ukiyo-sumi tracking-wide">{work.title}</h2>
-                    <span className="text-xs bg-ukiyo-beni text-white px-4 py-2 font-semibold tracking-wider">{work.category}</span>
-                  </div>
+                  <h2 className="text-2xl font-bold text-ukiyo-sumi mb-4 tracking-wide">{work.title}</h2>
                   <p className="text-ukiyo-kuchiba text-sm mb-6 tracking-wider">{work.author}</p>
                   <pre className="whitespace-pre-wrap font-serif text-ukiyo-sumi leading-loose bg-ukiyo-shironeri p-8 border-2 border-ukiyo-sumi/20">
                     {work.content}
@@ -112,15 +109,48 @@ export default function WorksPage() {
               ))}
 
               {works.length === 0 && (
-                <div className="text-center py-24">
-                  <div className="inline-block p-8 bg-white border-4 border-ukiyo-sumi/20 shadow-relief mb-6">
-                    <svg width="80" height="80" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="20" cy="20" r="16" stroke="#244F8A" strokeWidth="2" fill="none" strokeDasharray="4 4"/>
-                      <path d="M12 20 Q16 16 20 20 T28 20" stroke="#E63946" strokeWidth="2" fill="none"/>
-                    </svg>
-                  </div>
-                  <p className="text-ukiyo-sumi/70 text-lg mb-2">暂无作品</p>
-                  <p className="text-ukiyo-sumi/50 text-sm">前往管理页面添加作品</p>
+                <div className="text-center py-12">
+                  <p className="text-ukiyo-sumi/50 text-sm mb-12">演示文本样例</p>
+                  <article className="bg-white border-4 border-ukiyo-sumi/30 shadow-relief p-8 md:p-12 text-left">
+                    <h2 className="text-2xl font-bold text-ukiyo-sumi mb-4 tracking-wide">回答</h2>
+                    <p className="text-ukiyo-kuchiba text-sm mb-6 tracking-wider">北岛 · 演示文本样例</p>
+                    <pre className="whitespace-pre-wrap font-serif text-ukiyo-sumi leading-loose bg-ukiyo-shironeri p-8 border-2 border-ukiyo-sumi/20">
+卑鄙是卑鄙者的通行证，
+高尚是高尚者的墓志铭，
+看吧，在那镀金的天空中，
+飘满了死者弯曲的倒影。
+
+冰川纪已过去了，
+为什么到处都是冰凌？
+好望角发现了，
+为什么死海里千帆相竞？
+
+我来到这个世界上，
+只带着纸、绳索和身影，
+为了在审判之前，
+宣读那些被判决的声音。
+
+告诉你吧，世界
+我——不——相——信！
+纵使你脚下有一千名挑战者，
+那就把我算作第一千零一名。
+
+我不相信天是蓝的，
+我不相信雷的回声，
+我不相信梦是假的，
+我不相信死无报应。
+
+如果海洋注定要决堤，
+就让所有的苦水都注入我心中，
+如果陆地注定要上升，
+就让人类重新选择生存的峰顶。
+
+新的转机和闪闪星斗，
+正在缀满没有遮拦的天空，
+那是五千年的象形文字，
+那是未来人们凝视的眼睛。
+                    </pre>
+                  </article>
                 </div>
               )}
             </div>
