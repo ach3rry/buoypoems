@@ -107,7 +107,7 @@ export default function Home() {
             </div>
             <div className="prose prose-lg max-w-none mx-auto text-ukiyo-sumi/80">
               <p className="text-center leading-relaxed text-lg mb-6">
-                浮标 BUOY 是一个成立于 2024 年的先锋诗歌团体。我们由一群年轻的写作者组成，在语言的边界探索，在诗的海洋里漂流。
+                浮标 BUOY 是一个成立于 2026 年的先锋诗歌团体。我们由一群年轻的写作者组成，在语言的边界探索，在诗的海洋里漂流。
               </p>
               <p className="text-center leading-relaxed text-ukiyo-sumi/60">
                 我们不追随潮流，不固守传统。我们相信每一首诗都是一座浮标，标记着一次探索，证明着一种存在。
