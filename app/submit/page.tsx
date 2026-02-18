@@ -15,13 +15,21 @@ export default function SubmitPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const toEmail = '1595486059h@gmail.com';
+    const toEmail = '[your-email@example.com]'; // TODO: 替换为实际投稿邮箱
     const subject = encodeURIComponent(`【浮标投稿】${formData.title}`);
     const body = encodeURIComponent(
       `作者：${formData.name}\n邮箱：${formData.email}\n\n标题：${formData.title}\n\n内容：\n${formData.content}`
     );
 
     window.location.href = `mailto:${toEmail}?subject=${subject}&body=${body}`;
+  };
+
+  const [copied, setCopied] = useState(false);
+
+  const copyEmail = async () => {
+    await navigator.clipboard.writeText('[your-email@example.com]');
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -114,9 +122,24 @@ export default function SubmitPage() {
 
             <div className="mt-10 pt-8 border-t-2 border-ukiyo-sumi/10 text-center">
               <p className="text-ukiyo-sumi/60 text-sm mb-3 tracking-wider">或直接发送邮件</p>
-              <a href="mailto:1595486059h@gmail.com" className="text-ukiyo-beni font-bold hover:text-ukiyo-kuchiba transition-colors">
-                1595486059h@gmail.com
-              </a>
+              <div className="flex items-center justify-center gap-2">
+                <span className="text-ukiyo-beni font-bold font-mono">[your-email@example.com]</span>
+                <button
+                  onClick={copyEmail}
+                  className="p-1 hover:bg-ukiyo-shironeri/20 rounded transition-colors group relative"
+                  title="复制邮箱"
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-ukiyo-beni">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                  </svg>
+                  {copied && (
+                    <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-ukiyo-sumi text-white text-xs whitespace-nowrap">
+                      已复制
+                    </span>
+                  )}
+                </button>
+              </div>
             </div>
           </div>
         </div>
