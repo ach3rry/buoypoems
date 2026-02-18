@@ -115,7 +115,7 @@ export default function WorksPage() {
                     <h2 className="text-2xl font-bold text-ukiyo-sumi mb-4 tracking-wide">回答</h2>
                     <p className="text-ukiyo-kuchiba text-sm mb-6 tracking-wider">北岛 · 演示文本样例</p>
                     <pre className="whitespace-pre-wrap font-serif text-ukiyo-sumi leading-loose bg-ukiyo-shironeri p-8 border-2 border-ukiyo-sumi/20">
-卑鄙是卑鄙者的通行证，
+{`卑鄙是卑鄙者的通行证，
 高尚是高尚者的墓志铭，
 看吧，在那镀金的天空中，
 飘满了死者弯曲的倒影。
@@ -148,7 +148,7 @@ export default function WorksPage() {
 新的转机和闪闪星斗，
 正在缀满没有遮拦的天空，
 那是五千年的象形文字，
-那是未来人们凝视的眼睛。
+那是未来人们凝视的眼睛。`}
                     </pre>
                   </article>
                 </div>
